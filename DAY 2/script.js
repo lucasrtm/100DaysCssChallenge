@@ -1,8 +1,5 @@
-var an = document.getElementsByClassName('action')[0]
-function clicou(){
-   an.classList.toggle('active')
-    
-}
-
-
+$('.menu-icon').bind('click', function() {
+	$(this).toggleClass('active');
+	$(this).find('div').removeClass('no-animation');
+});
     

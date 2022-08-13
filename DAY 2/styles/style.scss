@@ -3,76 +3,137 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 main{
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aquamarine;
-}
-
-.container{
-    width: 400px;
-    height: 400px;
     background-color: black;
-    border: 2px solid white;
-    border-radius: 9px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
-.action{
+button{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
     flex-direction: column;
     gap: 20px;
-    cursor: pointer;
-    background-color: transparent;
+    transition: 1s;
+
+    .line{
+      width: 200px;
+      height: 45px;
+      border-radius: 25px;
+      background-color: white;
+      border: 1px solid blue;
+      position: relative;
+      transition: 1s;
+  }
+    .line.um{
+      animation: reverse1 .7s ease-in-out;
+    }
+    .line.dois{
+      animation: reverse2 .7s ease-in-out;
+    }
+    .line.tres{
+      animation: reverse3 .7s ease-in-out;
+    }
+
+      &.active{
+        .line.um{
+          animation: anima1 .7s ease-in-out forwards;
+        }
+        .line.dois{
+          animation: anima2 .7s ease-in-out forwards;
+        }
+        .line.tres{
+          animation: anima3 .7s ease-in-out forwards;
+        }
+      }
+   
+}
+.no-animation{
+  animation: none !important;
 }
 
-.line{
-    width: 200px;
-    height: 25px;
-    border-radius: 20px;
-    background-color: white;
-    position: relative;
-    top: 0;
-    transition: .5s ;
+@keyframes reverse1{
+  0%{
+    top: 65px;
+    transform: rotate(45deg);
+  }
+  50%{
+    top: 65px;
+    transform: rotate(0deg);
+  }
+  100%{
+    top: 0px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes reverse2{
+  0%{
+    transform: scale(0);
+  }
+  100%{
     transform: scale(1);
-    
+  }
+}
+@keyframes reverse3{
+  0%{
+    top: -65px;
+    transform: rotate(135deg);
+  }
+  50%{
+    top: -65px;
+    transform: rotate(0deg);
+  }
+  100%{
+    top: 0px;
+    transform: rotate(0deg);
+  }
+
 }
 
-.action.active{
-    .line.one{
-        top: 45px;
-        animation: teste2 .5s ease forwards;
-        animation-delay: .5s;
-    }
-    .line.two{
-        transform: scale(0);
-    }
-    .line.three{
-        top: -45px;
-        animation: teste .5s ease forwards;
-        animation-delay: .5s;
-        
-    }
-    @keyframes teste {
-        0%{}
-        100%{
-            transform: rotate(135deg);
-        }
-    }
-    @keyframes teste2 {
-        0%{}
-        100%{
-            transform: rotate(45deg);
-        }
-    }
+
+@keyframes anima1 {
+  0%{
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  50%{
+    top: 65px;
+    transform: rotate(0deg);
+  }
+  100%{
+    top: 65px;
+    transform: rotate(45deg);
+  }
 }
+
+@keyframes anima2 {
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+@keyframes anima3 {
+  0%{
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  50%{
+    top: -65px;
+    transform: rotate(0deg);
+  }
+  100%{
+    top: -65px;
+    transform: rotate(135deg);
+  }
+}
+
+
 
 

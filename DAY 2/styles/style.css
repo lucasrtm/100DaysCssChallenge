@@ -10,75 +10,199 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aquamarine;
-}
-
-.container {
-  width: 400px;
-  height: 400px;
   background-color: black;
-  border: 2px solid white;
-  border-radius: 9px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.action {
+button {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
   flex-direction: column;
   gap: 20px;
-  cursor: pointer;
-  background-color: transparent;
+  transition: 1s;
 }
-
-.line {
+button .line {
   width: 200px;
-  height: 25px;
-  border-radius: 20px;
+  height: 45px;
+  border-radius: 25px;
   background-color: white;
+  border: 1px solid blue;
   position: relative;
-  top: 0;
-  transition: 0.5s;
-  transform: scale(1);
+  transition: 1s;
+}
+button .line.um {
+  -webkit-animation: reverse1 0.7s ease-in-out;
+          animation: reverse1 0.7s ease-in-out;
+}
+button .line.dois {
+  -webkit-animation: reverse2 0.7s ease-in-out;
+          animation: reverse2 0.7s ease-in-out;
+}
+button .line.tres {
+  -webkit-animation: reverse3 0.7s ease-in-out;
+          animation: reverse3 0.7s ease-in-out;
+}
+button.active .line.um {
+  -webkit-animation: anima1 0.7s ease-in-out forwards;
+          animation: anima1 0.7s ease-in-out forwards;
+}
+button.active .line.dois {
+  -webkit-animation: anima2 0.7s ease-in-out forwards;
+          animation: anima2 0.7s ease-in-out forwards;
+}
+button.active .line.tres {
+  -webkit-animation: anima3 0.7s ease-in-out forwards;
+          animation: anima3 0.7s ease-in-out forwards;
 }
 
-.action.active .line.one {
-  top: 45px;
-  -webkit-animation: teste2 0.5s ease forwards;
-          animation: teste2 0.5s ease forwards;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+.no-animation {
+  -webkit-animation: none !important;
+          animation: none !important;
 }
-.action.active .line.two {
-  transform: scale(0);
-}
-.action.active .line.three {
-  top: -45px;
-  -webkit-animation: teste 0.5s ease forwards;
-          animation: teste 0.5s ease forwards;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-@-webkit-keyframes teste {
+
+@-webkit-keyframes reverse1 {
+  0% {
+    top: 65px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 65px;
+    transform: rotate(0deg);
+  }
   100% {
-    transform: rotate(135deg);
+    top: 0px;
+    transform: rotate(0deg);
   }
 }
-@keyframes teste {
+
+@keyframes reverse1 {
+  0% {
+    top: 65px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 65px;
+    transform: rotate(0deg);
+  }
   100% {
-    transform: rotate(135deg);
+    top: 0px;
+    transform: rotate(0deg);
   }
 }
-@-webkit-keyframes teste2 {
+@-webkit-keyframes reverse2 {
+  0% {
+    transform: scale(0);
+  }
   100% {
+    transform: scale(1);
+  }
+}
+@keyframes reverse2 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes reverse3 {
+  0% {
+    top: -65px;
+    transform: rotate(135deg);
+  }
+  50% {
+    top: -65px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+}
+@keyframes reverse3 {
+  0% {
+    top: -65px;
+    transform: rotate(135deg);
+  }
+  50% {
+    top: -65px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes anima1 {
+  0% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: 65px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 65px;
     transform: rotate(45deg);
   }
 }
-@keyframes teste2 {
+@keyframes anima1 {
+  0% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: 65px;
+    transform: rotate(0deg);
+  }
   100% {
+    top: 65px;
     transform: rotate(45deg);
+  }
+}
+@-webkit-keyframes anima2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes anima2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes anima3 {
+  0% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: -65px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: -65px;
+    transform: rotate(135deg);
+  }
+}
+@keyframes anima3 {
+  0% {
+    top: 0px;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: -65px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: -65px;
+    transform: rotate(135deg);
   }
 }/*# sourceMappingURL=style.css.map */
