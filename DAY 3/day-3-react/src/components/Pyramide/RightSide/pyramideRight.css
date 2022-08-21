@@ -1,0 +1,19 @@
+.Pright{
+    height: 57px;
+	width: 116px;
+    position: absolute;
+    top: 73.3px;
+    background-color: rgb(201, 201, 201);
+    clip-path: polygon(60% 100%, 100% 100%, 50% 0%);
+    animation: change-color-Pright 3s linear infinite;
+}
+/* -----------ANIMATIONS----------- */
+@keyframes change-color-Pright {
+    0%{}
+    80%{
+        background-color: white;
+    }
+    100%{
+        background-color: white;
+    }
+}

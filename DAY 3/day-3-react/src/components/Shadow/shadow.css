@@ -1,0 +1,22 @@
+.Shadow{
+    width: 200px;
+    height: 70px;
+    position: absolute;
+    top: 130px;
+    background-color: rgba(0, 0, 0, 0.342);
+    transform: rotate(180deg);
+    clip-path: polygon(42.5px 100%, 157.8px 100%, -170% 0%);
+    animation: shadow-floor 3s linear infinite;
+    z-index: 3;
+}
+/* -----------ANIMATIONS----------- */
+@keyframes shadow-floor {
+    0%{}
+    60%{
+        height: 40px;
+        clip-path: polygon(42.5px 100%, 157.8px 100%, 50% 0%);
+    }
+    100%{
+        clip-path: polygon(42.5px 100%, 157.8px 100%, 170% 0%);
+    }
+}

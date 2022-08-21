@@ -1,0 +1,22 @@
+.Pleft{
+    height: 57px;
+	width: 116px;
+    position: absolute;
+    top: 73.4px;
+    background-color: white;
+    clip-path: polygon(0% 100%, 61% 100%, 50% 0%);
+    animation: change-color-Pleft 3s linear infinite;
+}
+/* -----------ANIMATIONS----------- */
+@keyframes change-color-Pleft {
+    0%{}
+    40%{
+        background-color: white;
+    }
+    80%{
+        background-color: rgb(201, 201, 201);
+    }
+    100%{
+        background-color: rgb(201, 201, 201);
+    }
+}
