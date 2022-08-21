@@ -3,60 +3,68 @@
     padding: 0;
     box-sizing: border-box;
 }
+// VARIABLES
+$light-brown: #d1c2bd;
+$dark-brown: #998b86;
+// 
 main{
-    width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    width: 100%;
+    height: 100vh;
+    background-color: $light-brown;
 }
 button{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
     flex-direction: column;
     gap: 20px;
+    padding: 50px;
+    border: none;
+    border-radius: 15px;
+    background-color: $dark-brown;
+    box-shadow: 0px 0px 10px $dark-brown;
     transition: 1s;
 
     .line{
       width: 200px;
       height: 45px;
       border-radius: 25px;
-      background-color: white;
-      border: 1px solid blue;
+      background-color: $light-brown;
+      box-shadow: inset 0px 0px 10px $dark-brown;
       position: relative;
       transition: 1s;
   }
-    .line.um{
-      animation: reverse1 .7s ease-in-out;
+    .line.one{
+      animation: reverse-animation-one .7s ease-in-out;
     }
-    .line.dois{
-      animation: reverse2 .7s ease-in-out;
+    .line.two{
+      animation: reverse-animation-two .7s ease-in-out;
     }
-    .line.tres{
-      animation: reverse3 .7s ease-in-out;
+    .line.three{
+      animation: reverse-animation-three .7s ease-in-out;
     }
 
       &.active{
-        .line.um{
-          animation: anima1 .7s ease-in-out forwards;
+        .line.one{
+          animation: animation-one .7s ease-in-out forwards;
         }
-        .line.dois{
-          animation: anima2 .7s ease-in-out forwards;
+        .line.two{
+          animation: animation-two .7s ease-in-out forwards;
         }
-        .line.tres{
-          animation: anima3 .7s ease-in-out forwards;
+        .line.three{
+          animation: animation-three .7s ease-in-out forwards;
         }
       }
-   
 }
 .no-animation{
   animation: none !important;
 }
 
-@keyframes reverse1{
+// ANIMATIONS
+@keyframes reverse-animation-one{
   0%{
     top: 65px;
     transform: rotate(45deg);
@@ -71,7 +79,7 @@ button{
   }
 }
 
-@keyframes reverse2{
+@keyframes reverse-animation-two{
   0%{
     transform: scale(0);
   }
@@ -79,7 +87,8 @@ button{
     transform: scale(1);
   }
 }
-@keyframes reverse3{
+
+@keyframes reverse-animation-three{
   0%{
     top: -65px;
     transform: rotate(135deg);
@@ -92,11 +101,9 @@ button{
     top: 0px;
     transform: rotate(0deg);
   }
-
 }
 
-
-@keyframes anima1 {
+@keyframes animation-one {
   0%{
     top: 0px;
     transform: rotate(0deg);
@@ -111,7 +118,7 @@ button{
   }
 }
 
-@keyframes anima2 {
+@keyframes animation-two {
   0%{
     transform: scale(1);
   }
@@ -119,7 +126,8 @@ button{
     transform: scale(0);
   }
 }
-@keyframes anima3 {
+
+@keyframes animation-three {
   0%{
     top: 0px;
     transform: rotate(0deg);
@@ -133,7 +141,3 @@ button{
     transform: rotate(135deg);
   }
 }
-
-
-
-
