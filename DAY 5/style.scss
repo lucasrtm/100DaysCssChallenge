@@ -1,0 +1,253 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fd808698;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+}
+main{
+    width: 400px;
+    height: 400px;
+    background-color: #e0dbbd;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar{
+    width: 300px;
+    height: 250px;
+    background-color: azure;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.404);
+    [class|="header"]{
+        width: 100%;
+        height: 75px;
+        border-radius: 5px 5px 0px 0px;
+        background-color: rgb(161, 65, 65);
+    }
+}
+.textContent-header-calendar{
+    height: 100%;
+    display: flex;
+    color: wheat;
+    font-weight: 700;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    justify-content: space-between;
+}
+
+.subtitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    padding-right: 20px;
+    gap: 35px;
+    width: 100%;
+    height: 40px;
+    // border: 1px solid black;
+    p{
+        position: relative; 
+    }
+    p:nth-child(1)::before, p:nth-child(2)::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 4px;
+        border-radius: 50px;
+    }
+    p:nth-child(1)::before{
+        left: -31%;
+        background-color: red;
+    }
+    p:nth-child(2)::before{
+        left: -17%;
+        background-color: blue;
+    }
+    
+}
+
+.graphic{
+    width: 100%;
+    height: 95px;
+    position: relative;
+
+    hr{
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.342);
+        border-style: none;
+    }
+    hr:nth-child(2){
+        top: 50%;
+    }
+    hr:nth-child(3){
+        bottom: 0;
+    }
+    span{
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        display: block;
+        position: absolute;
+        cursor: pointer;
+    }
+    .viewLinesContent{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        .viewLine{
+            position: absolute;
+            width: 40px;
+            height: 5px;
+            background-color: red;
+        }
+        span{background-color: rgb(243, 89, 89); z-index: 2;}
+        span:nth-child(1){
+            left: 12px;
+            top: 58px;
+        }
+        span:nth-child(2){
+            left: 50.5px;
+            top: 11px;
+        }
+        span:nth-child(3){
+            left: 81.7px;
+            top: 41px;
+        }
+        span:nth-child(4){
+            left: 122.36px;
+            top: 0px;
+        }
+        span:nth-child(5){
+            left: 180px;
+            top: 56px;
+        }
+        span:nth-child(6){
+            left: 225.7px;
+            top: 45px;
+        }
+        span:nth-child(7){
+            left: 271px;
+            top: 13.6px;
+        }
+        .viewLine.one { width: 60px; left: 7px; top: 37px; transform: rotate(-50deg);}
+        .viewLine.two { width: 45px; left: 47.8px; top: 29px; transform: rotate(41.1deg); }
+        .viewLine.three{ width: 58px; left: 76px; top: 24px; transform: rotate(-45deg); }
+        .viewLine.four { width: 85px; left: 113px; top: 30px; transform: rotate(45deg); }
+        .viewLine.five { width: 50px; left: 182.5px; top: 52.9px; transform: rotate(-15deg); }
+        .viewLine.six { width: 55px; left: 226px; top: 31.5px; transform: rotate(-34deg); }
+    }
+    .PurchasesLinesContent{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        .purchasesLine{
+            position: absolute;
+            width: 40px;
+            height: 5px;
+            background-color: blue;
+        }
+        span{background-color: rgb(70, 70, 247); z-index: 2;}
+        span:nth-child(1){
+            left: 12px;
+            top: 10px;
+        }
+        span:nth-child(2){
+            left: 50.5px;
+            top: 55px;
+        }
+        span:nth-child(3){
+            left: 85px;
+            top: 8px;
+        }
+        span:nth-child(4){
+            left: 125px;
+            top: 48px;
+        }
+        span:nth-child(5){
+            left: 188px;
+            top: 5px;
+        }
+        span:nth-child(6){
+            left: 225.7px;
+            top: 39.4px;
+        }
+        span:nth-child(7){
+            left: 271px;
+            top: 68px;
+        }
+        .purchasesLine.one { width: 60px; left: 7px; top: 37px; transform: rotate(50deg);}
+        .purchasesLine.two { width: 55px; left: 45px; top: 35px; transform: rotate(-55deg); }
+        .purchasesLine.three{ width: 58px; left: 80px; top: 30px; transform: rotate(45deg); }
+        .purchasesLine.four { width: 80px; left: 120px; top: 30px; transform: rotate(-35deg); }
+        .purchasesLine.five { width: 50px; left: 186.5px; top: 25px; transform: rotate(45deg); }
+        .purchasesLine.six { width: 55px; left: 226px; top: 56.5px; transform: rotate(34deg); }
+    }
+
+}
+
+.footer-calendar{
+    width: 100%;
+    height: 40px;
+    border-radius:0 0 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    gap: 15px;
+}
+
+
+.balao{
+    width: 22px;
+    height: 20px;
+    margin-top: 5px;
+    position: absolute;
+    border-radius: 15%;
+    display: none;
+    background-color: #fd808698;
+    color: white;
+    padding-top: 2px;
+    text-align: center;
+    font-size: .8rem;
+    z-index: 5;
+    opacity: 0;
+    animation: teste .3s linear forwards;
+}
+.balao::before{
+    content: '';
+    border: 5px solid transparent;
+    border-top: 5px solid #fab2b698;
+    border-left: 5px solid #fab2b698;
+    position: absolute;
+    left: 6px;
+    top: 12px;
+    transform: rotate(-135deg);
+}
+
+@keyframes teste {
+    0%{
+        opacity: 0;
+        margin-top: 5;
+    }
+    100%{
+        margin-top: -2px;
+        opacity: 1;
+    }
+}
