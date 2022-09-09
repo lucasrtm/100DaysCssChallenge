@@ -1,12 +1,13 @@
-function teste(event, value) {
-    var top = event.target.offsetTop - 25
-    var left = event.target.offsetLeft - 6 
-    document.getElementById('balao').style.display = 'block'
-    document.getElementById('balao').style.top = top + 'px'
-    document.getElementById('balao').style.left = left + 'px'
-    document.getElementById('balao').innerText = value
+function mouseOver(event, value) {
+    const balloon = document.getElementById('balloon')
+    const top = event.target.offsetTop - 25;
+    const left = event.target.offsetLeft - 6;
+    balloon.style.display = 'block';
+    balloon.style.top = top + 'px';
+    balloon.style.left = left + 'px';
+    balloon.innerText = value;
 }
 
-function teste2(event) {
-    document.getElementById('balao').style.display = 'none'
+function mouseOut() {
+    document.getElementById('balloon').style.display = 'none';
 }

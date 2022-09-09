@@ -13,34 +13,36 @@
             <div class="header-calendar">
 
                 <div class="textContent-header-calendar">
-                    <div class="tContent-one">
+                    <div>
                         <p>WEEKLY REPORT</p>
                         <p>01. Feb - 07. Feb</p>
                     </div>
-                    <div class="tContent-two">
+                    <div>
                         <p>Revenue</p>
                         <p>$3.500,00</p>
                     </div>
                 </div>
+            </div>
 
                 <div class="subtitle">
                     <p>Views</p>
                     <p>Purchases</p>
                 </div>
-
+            
                 <div class="graphic">
                     <hr>
                     <hr>
                     <hr>
-                    <div id="balao" class="balao">300</div>
+                    <div id="balloon" class="balloon"></div>
+                <section class="viewLines">
                     <div class="viewLinesContent">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,300)" ></span onmouseout="teste2(event)">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,600)"></span onmouseout="teste2(event)">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,500)"></span onmouseout="teste2(event)">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,700)"></span onmouseout="teste2(event)">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,300)"></span onmouseout="teste2(event)">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,450)"></span onmouseout="teste2(event)">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,600)"></span onmouseout="teste2(event)">
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,300)" ></span>
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,600)"></span>
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,500)"></span>
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,700)"></span>
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,300)"></span>
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,450)"></span>
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,600)"></span>
                         <div class="viewLine one"></div>
                         <div class="viewLine two"></div>
                         <div class="viewLine three"></div>
@@ -48,14 +50,16 @@
                         <div class="viewLine five"></div>
                         <div class="viewLine six"></div>
                     </div>
-                    <div class="PurchasesLinesContent">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,600)"></span onmouseout="teste2(event)">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,350)"></span onmouseout="teste2(event)">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,600)"></span onmouseout="teste2(event)">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,450)"></span onmouseout="teste2(event)">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,650)"></span onmouseout="teste2(event)">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,550)"></span onmouseout="teste2(event)">
-                        <span onmouseout="teste2(event)" onmouseover="teste(event,200)"></span onmouseout="teste2(event)">
+                </section>
+                <section class="purchasesLines">
+                    <div class="purchasesLinesContent">
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,600)"></span>
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,350)"></span>
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,600)"></span>
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,450)"></span>
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,650)"></span>
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,550)"></span>
+                        <span onmouseout="mouseOut()" onmouseover="mouseOver(event,200)"></span>
                         <div class="purchasesLine one"></div> 
                         <div class="purchasesLine two"></div>
                         <div class="purchasesLine three"></div>
@@ -63,6 +67,7 @@
                         <div class="purchasesLine five"></div>
                         <div class="purchasesLine six"></div>
                     </div>
+                </section>
                 </div>
 
                 <div class="footer-calendar">
@@ -74,8 +79,7 @@
                     <p>SAT</p>
                     <p>SUN</p>
                 </div>
-            </div>
-
+            
         </section>
     </main>
     <script src="script.js"></script>
