@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(56, 96, 97);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-color: cadetblue;
+}
+
+.positionContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.positionContent .allContent {
+  display: grid;
+  border-radius: 5px;
+  background-color: cornsilk;
+}
+.positionContent .allContent .block:nth-child(1) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 27px;
+  grid-row: 1/3;
+  grid-column: 1;
+}
+.positionContent .allContent .block:nth-child(1) .imageContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.positionContent .allContent .block:nth-child(1) .imageContent:hover .circle.one {
+  transform: rotate(360deg);
+}
+.positionContent .allContent .block:nth-child(1) .imageContent:hover .circle.two {
+  transform: rotate(-360deg);
+}
+.positionContent .allContent .block:nth-child(1) .imageContent .circle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  transition: 2s;
+}
+.positionContent .allContent .block:nth-child(1) .imageContent .circle.one {
+  border-radius: 50%;
+  border: 1.2px solid black;
+  border-left: 1.2px solid transparent;
+}
+.positionContent .allContent .block:nth-child(1) .imageContent .circle.two {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 1.2px solid black;
+  border-right: 1.2px solid transparent;
+}
+.positionContent .allContent .block:nth-child(1) .imageContent img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+.positionContent .allContent .block:nth-child(1) .textContent {
+  text-align: center;
+  letter-spacing: -1.7px;
+  word-spacing: 3px;
+  line-height: 19px;
+}
+.positionContent .allContent .block:nth-child(1) .textContent p:nth-child(1) {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.positionContent .allContent .block:nth-child(2) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  grid-row: 3;
+}
+.positionContent .allContent .block:nth-child(2) button {
+  width: 120px;
+  padding: 5px 0 5px 0;
+  border: 1px solid black;
+  border-radius: 25px;
+  background-color: cornsilk;
+  transition: 0.5s;
+}
+.positionContent .allContent .block:nth-child(2) button:hover {
+  background-color: rgb(151, 179, 180);
+}
+.positionContent .allContent .block:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.positionContent .allContent .block:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.positionContent .allContent .block:nth-child(5) {
+  grid-column: 2;
+  grid-row: 3;
+}
+.positionContent .allContent .block:nth-child(1), .positionContent .allContent .block:nth-child(2) {
+  width: 200px;
+  height: 100%;
+}
+.positionContent .allContent .block:nth-child(3), .positionContent .allContent .block:nth-child(4), .positionContent .allContent .block:nth-child(5) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 100px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.positionContent .allContent .block:nth-child(3):hover, .positionContent .allContent .block:nth-child(4):hover, .positionContent .allContent .block:nth-child(5):hover {
+  background-color: rgb(151, 179, 180);
+}
+.positionContent .allContent .block:nth-child(3) h1, .positionContent .allContent .block:nth-child(4) h1, .positionContent .allContent .block:nth-child(5) h1 {
+  letter-spacing: -2.8px;
+  font-size: 1.4rem;
+}
+.positionContent .allContent .block:nth-child(3) p, .positionContent .allContent .block:nth-child(4) p, .positionContent .allContent .block:nth-child(5) p {
+  font-size: 0.9rem;
+}/*# sourceMappingURL=style.css.map */
